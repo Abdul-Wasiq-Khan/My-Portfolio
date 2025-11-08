@@ -8,6 +8,7 @@ import {
 } from "react-router";
 
 import "./app.css";
+import Footer from "./components/footer";
 
 export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -28,13 +29,15 @@ export function Layout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body >
         {children}
         <ScrollRestoration />
         <Scripts />
+        <Footer />
       </body>
     </html>
   );

@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "projects": [
+        {   
+            "id": "project1",
+            "title": "My Project",    
+            "description": "A brief description of my project.",
+            "github": "https://github.com/myusername/myproject",
+            "liveUrl": "",
+            "technologies": ["JavaScript", "Web Development"],
+            "keyFeatures": [
+                "Implemented feature X using technology Y.",
+                "Optimized performance by Z%."
+            ],
+            "status": "completed",
+            "image": "",
+            "timespent": ""
+        },
+        {   
+            "id": "project2",
+            "title": "Another Project",    
+            "description": "A brief description of another project.",
+            "github": "https://github.com/myusername/anotherproject",
+            "liveUrl": "",
+            "technologies": ["Python", "Data Science"],
+            "keyFeatures": [
+                "Developed a machine learning model for prediction.",
+                "Improved accuracy by 15% through feature engineering."
+            ],
+            "status": "completed",
+            "image": "",
+            "timespent": ""
+        }
+    ]
+}

@@ -1,12 +1,20 @@
-import { Welcome } from "../welcome/welcome";
+import About from "../components/about";
+import Hero from "../components/Hero.jsx";
 
 export function meta({}) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Abdul Wasiq Khan's Profile" },
+    { name: "description", content: "Welcome to Abdul Wasiq Khan's profile!" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <>
+    <Hero
+      backgroundImage="./pictures/background.jpg"
+      title="Abdul Wasiq Khan"
+      description="Specializing in software-driven robotic systems, full-stack web development, and embedded systems."
+    />
+    <About />
+  </>;
 }
