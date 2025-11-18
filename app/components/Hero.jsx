@@ -27,21 +27,16 @@ const Hero = ({
     return () => clearInterval(timer);
   }, [title, typewriterSpeed]);
 
-  // Test image loading
-  useEffect(() => {
-    if (backgroundImage) {
-      const img = new Image();
-      img.onload = () => console.log('✅ Background image loaded successfully');
-      img.onerror = () => console.error('❌ Failed to load background image:', backgroundImage);
-      img.src = backgroundImage;
-    }
-  }, [backgroundImage]);
+
 
   console.log('Background image path:', backgroundImage);
 
   return (
     <div 
-      className={`min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative bg-[url("/pictures/background.jpg")] z-10`}
+      className="min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat relative z-10"
+      style={{
+        backgroundImage: `url("${backgroundImage}")`
+      }}
     >
 
 
@@ -77,9 +72,15 @@ const Hero = ({
         )}
       </div>
       
-
-      {/*
-            <style jsx>{`
+      <style>{`
+        .brighten {
+          animation: brighten 8s ease-in-out forwards;
+        }
+        @keyframes brighten {
+          from { opacity: 0.8; }
+          to { opacity: 0.4; }
+        }
+        
         .animate-fade-in {
           animation: fadeIn 1s ease-in;
         }
@@ -88,16 +89,6 @@ const Hero = ({
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
-      `}</style>
-      
-      */}
-      <style jsx>{`
-      .brighten {
-        animation: brighten 10s ease-in-out forwards;
-      }
-      @keyframes brighten {
-        from { opacity: 0.8; }
-        to { opacity: 0.4; }
       `}</style>
 
     </div>

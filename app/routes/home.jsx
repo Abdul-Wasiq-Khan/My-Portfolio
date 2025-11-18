@@ -1,5 +1,7 @@
 import About from "../components/about";
 import Hero from "../components/Hero.jsx";
+import Projects from "../components/mainProjects.jsx";
+
 
 export function meta({}) {
   return [
@@ -11,10 +13,11 @@ export function meta({}) {
 export default function Home() {
   return <>
     <Hero
-      backgroundImage="./pictures/background.jpg"
+      backgroundImage="pictures/background.jpg"
       title="Abdul Wasiq Khan"
       description="Specializing in software-driven robotic systems, full-stack web development, and embedded systems."
     />
     <About />
+    <Projects />
   </>;
 }
