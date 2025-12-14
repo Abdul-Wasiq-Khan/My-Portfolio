@@ -49,10 +49,12 @@ export default function LanguagesCard() {
 
     return (
         <div className="bg-neutral-800 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 mt-6 ">
-            <h2 className="text-2xl font-bold mb-6 text-white">Tech Stack</h2>
+            <h2 className="text-2xl font-bold mb-6 text-white" data-aos="fade-up dat">Tech Stack</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {skills.map((category) => (
-                    <div key={category.category} className={`p-4 rounded-lg border ${getColorClasses(category.color)}  hover:opacity-80 transform transition-transform duration-200 animate-fade-in`}>
+                    <div key={category.category} className={`p-4 rounded-lg border ${getColorClasses(category.color)}  hover:opacity-80 transform transition-transform duration-200`}
+                        data-aos="zoom-in"
+                    >
                         <div className="flex items-center mb-3">
                             <div className="text-xl mr-3">{category.logo}</div>
                             <h3 className="font-semibold text-white">{category.category}</h3>

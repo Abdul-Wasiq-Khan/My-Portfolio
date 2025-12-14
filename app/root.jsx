@@ -5,10 +5,15 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
+import { useEffect } from "react";
 
 import "./app.css";
 import Footer from "./components/footer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,6 +29,13 @@ export const links = () => [
 ];
 
 export function Layout({ children }) {
+  useEffect(() => {
+    AOS.init({ 
+      duration: 1000, 
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -44,6 +56,12 @@ export function Layout({ children }) {
 }
 
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location.pathname]);
+
   return <Outlet />;
 }
 

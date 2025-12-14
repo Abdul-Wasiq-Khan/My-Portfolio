@@ -4,7 +4,7 @@ export default function Footer() {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <footer className="fixed bottom-0 left-0 right-0 bg-neutral-800 text-center transition-all duration-300 ease-in-out z-10">
+        <footer className="fixed bottom-0 left-0 right-0 bg-neutral-800 text-center transition-all duration-300 ease-in-out z-10 opacity-0 hover:opacity-100">
             <div 
                 className="py-4 cursor-pointer hover:bg-neutral-700"
                 onClick={() => setIsExpanded(!isExpanded)}

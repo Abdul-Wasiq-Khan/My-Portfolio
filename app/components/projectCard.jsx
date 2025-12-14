@@ -16,7 +16,7 @@ export default function ProjectCard({ project }) {
   const getTagColor = (tech) => tagPalette[tech] || defaultColor;
 
   return (
-    <>
+    <div data-aos="zoom-in-up">
       <style>{`
         @keyframes glowFade {
           0%, 100% { 
@@ -108,7 +108,7 @@ export default function ProjectCard({ project }) {
 
       </div>
       
-    </>
+    </div>
   );
 }
 {/*
